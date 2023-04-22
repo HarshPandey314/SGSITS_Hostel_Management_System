@@ -1,0 +1,59 @@
+.card--container {
+  display: flex;
+  justify-content: center;
+}
+
+.card--status--title--box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9%;
+  width: 100%;
+  padding: 1% 0 1% 0;
+}
+
+.card--title--items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.bgColor1 {
+  background-color: rgba(187, 187, 187, 0.172);
+}
+
+.bullet0 {
+  color: green;
+  width: 20%;
+}
+
+.bullet1 {
+  color: red;
+  width: 20%;
+}
+
+.card--title--sn {
+  width: 8%;
+}
+
+.card--title--room {
+  width: 9%;
+}
+
+.card--title--hbuilding {
+  width: 20%;
+}
+
+.card--title--subject {
+  width: 20%;
+}
+
+.card--title--complaint {
+  width: 30%;
+}
+
+.card--title--status {
+  width: 13%;
+}

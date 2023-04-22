@@ -1,0 +1,126 @@
+.gallery--container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.gallery--rightSection {
+  /* border: 2px solid red; */
+  background: url("../assets/Images/loginPage-image3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+}
+
+.gallery--rightSection--heading {
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12%;
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.gallery--rightSection--content {
+  /* border: 2px solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88%;
+  width: 100%;
+}
+
+.gallery--content--div {
+  /* border: 2px solid black; */
+  background-color: white;
+  color: black;
+  border-radius: 2vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 80%;
+  height: 90%;
+  margin-top: -2%;
+  padding: 2%;
+}
+
+.content--top {
+  /* border: 2px solid red; */
+  height: 10%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 4% 0 0;
+}
+
+.upload--btn {
+  /* border: 2px solid black; */
+  background-color: rgb(3, 175, 254);
+  height: 60%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload--btn:hover {
+  background-color: rgba(3, 175, 254, 0.761);
+}
+
+.link--btn {
+  text-decoration: none;
+  color: white;
+}
+
+.content--bottom {
+  /* border: 2px solid violet; */
+  max-height: 85%;
+  max-width: 95%;
+  padding: 2%;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.gallery--card--box {
+  margin: 2%;
+}
+
+.gallery--card--title {
+  display: flex;
+}
+
+.gallery--card--heading {
+  background-color: black;
+  color: white;
+  padding: 2% 2% 2% 2%;
+  margin-bottom: 1%;
+  width: 50%;
+}
+
+.gallery--add--btn {
+  background-color: rgb(3, 175, 254);
+  padding: 1% 2% 1% 1%;
+  margin-bottom: 1%;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.gallery--card--link {
+  font-size: 1.3em;
+  display: block;
+  text-decoration: none;
+}
+
+.gallery--card--link:hover {
+  color: red;
+}
+
+.upload--form {
+  display: flex;
+  flex-direction: column;
+}

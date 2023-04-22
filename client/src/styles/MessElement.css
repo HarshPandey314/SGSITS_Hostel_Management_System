@@ -1,0 +1,30 @@
+.messCard--container {
+    display: flex;
+    justify-content: center;
+}
+
+.messCard--status--title--box {
+    /* border: 2px solid blue; */
+    /* background-color: rgb(23, 188, 230);
+    color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9%;
+    width: 100%;
+    padding: 1% 0 1% 0;
+}
+
+.messCard--title--items {
+    /* border: 2px solid green; */
+    /* margin: 0 4% 0 4%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.messCard--bgColor1 {
+    background-color: rgba(187, 187, 187, 0.172);
+}

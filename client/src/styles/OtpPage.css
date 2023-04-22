@@ -1,0 +1,126 @@
+.otp--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../assets/Images/loginPage-image3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.otp--box {
+  /* border: 2px solid black; */
+}
+
+.otp--null {
+  /* border: 2px solid black; */
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+}
+
+.otp--form {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border-radius: 2vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 25vw;
+  height: 45vh;
+  padding: 1vh 4vw 3vh 4vw;
+}
+
+.otp--heading1 {
+  display: block;
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+.otp--heading1-2 {
+  display: block;
+  text-align: center;
+  font-size: 1vw;
+  /* font-weight: bold; */
+  width: 100%;
+  margin-top: 5vh;
+  margin-bottom: 2.5vh;
+}
+
+.otp--input--box {
+  /* border: 2px solid blue; */
+  text-align: center;
+  padding-bottom: 1vh;
+  width: 100%;
+}
+
+.otp--heading--input {
+  font-size: 2.2vh;
+  font-weight: 200;
+  padding: 1vh 0 0.7vh 0;
+}
+
+.otp--input--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid grey; */
+  text-align: center;
+  border-radius: 0.4vw;
+  padding: 1vh 0.4vw 1vh 0.4vw;
+  margin-bottom: 1.5vh;
+}
+
+.otp--input--container:hover {
+  /* border: 1px solid blue; */
+}
+
+.otp--form--input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.otp--icon {
+  margin-right: 0.4vw;
+}
+
+.otp--input--box {
+}
+
+.form--input--char {
+  border: none;
+  border-bottom: 1px solid grey;
+  margin: 0 0.2vw 0 0.2vw;
+  font-size: 3vh;
+}
+
+.otp--submit--btn {
+  text-align: center;
+  margin: 2vh 0 5vh 0;
+}
+
+.otp--submit--btn > input:hover {
+  background-color: #f8cfa0ae;
+}
+
+.otp--submit--btn > input {
+  font-size: 3vh;
+  background-color: #fcf4c3;
+  border: none;
+  color: rgb(169, 60, 169);
+  width: 15vw;
+  height: 4.5vh;
+  border-radius: 2vh;
+  cursor: pointer;
+  font-weight: 150;
+}

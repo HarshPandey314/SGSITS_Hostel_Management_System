@@ -1,0 +1,25 @@
+.homePage--container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.homePage--rightSection {
+  /* border: 2px solid red; */
+  background: url("../assets/Images/loginPage-image3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+}
+
+.homePage--rightSection--heading {
+  /* border: 2px solid blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12%;
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+}
