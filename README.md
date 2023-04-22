@@ -1,3 +1,3 @@
-#WEB ENGINEERING PROJECT 
-#Garvit Prasad (0801IT201040)
+Web Engineering Project <br/> 
+Garvit Prasad (0801IT201040) <br/>
 #Harsh Pandey (0801IT201043)
