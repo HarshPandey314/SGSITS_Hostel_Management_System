@@ -1,0 +1,106 @@
+.mainPage--container {
+    background: url("../assets/Images/loginPage-image3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.mainPage--navbar {
+    /* border: 2px solid black; */
+    color: white;
+    background-color: #3A3B3C;
+    display: flex;
+    width: 100%;
+    padding: 1vh 0 1vh 0;
+}
+
+.navbar--item1 {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3vw;
+    padding-right: 48vw;
+}
+
+.logo--img {
+    /* border: 2px solid blue; */
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-right: 1.2vw;
+}
+
+.logo--img>img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.navbar--item2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    list-style: none;
+}
+
+.item2--li {
+    color: white;
+    padding: 0 3vw 0 1vw;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mainPage--title {
+    /* border: 2px solid red; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 25vh;
+    padding: 3vh 0 3vh 0;
+}
+
+.title--logo {
+    border-radius: 50%;
+    height: 20vh;
+    width: 20vh;
+    margin: 0 2vw 0 2vw;
+}
+
+.title--logo>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.title--heading {
+    font-size: 4vw;
+}
+
+.dropdown--options--box {
+    background-color: #3A3B3C;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 7.2vh;
+    right: 6vw;
+}
+
+.dropdown--items {
+    text-decoration: none;
+    color: white;
+    padding: 1vh 1vw 1vh 1vw;
+    font-size: 1em;
+    /* color: rgb(0, 204, 255); */
+}
+
+.dropdown--items:hover {
+    background-color: rgba(128, 128, 128, 0.365);
+}
+
+#op--icon {
+    margin-left: 2vh;
+}

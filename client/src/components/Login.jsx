@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faList12 } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import "../styles/LoginPage.css";
 
@@ -49,7 +49,7 @@ const LoginPage = () => {
               <div className="heading--input">Enrollment</div>
               <div className="input--container">
                 <div className="icon">
-                  <FontAwesomeIcon icon={faEnvelope} />
+                  <FontAwesomeIcon icon={faList12} />
                 </div>
                 <input
                   value={enrollmentNo}

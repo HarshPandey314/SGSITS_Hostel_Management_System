@@ -8,7 +8,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import logo from "../assets/Images/HostelOffice.jpg";
+import logo from "../assets/Images/website-logo-circle.png";
 import MoreOptions from "./MoreOptions";
 import dp from "../assets/Images/change-photo.jpg";
 import "../styles/Menu.css";
