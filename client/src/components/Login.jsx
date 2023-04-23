@@ -27,6 +27,7 @@ const LoginPage = () => {
     const data = await response.json();
     // console.log(data[0]);
     if (
+      data.length == 1 &&
       data[0].status == "0" &&
       data[0].password == password &&
       data[0].id == enrollmentNo
