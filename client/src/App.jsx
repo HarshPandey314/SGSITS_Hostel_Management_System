@@ -11,6 +11,7 @@ import Status from "./components/Status";
 import "./App.css";
 import GalleryPage from "./components/GalleryPage";
 import MessMenu from "./components/MessMenu";
+import MainPage from "./components/MainPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/status" element={<Status />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/MessMenu" element={<MessMenu />} />
+          <Route path="/mainPage" element={<MainPage />} />
         </Routes>
       </BrowserRouter>
     </div>
