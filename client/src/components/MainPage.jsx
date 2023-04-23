@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import  logo  from '../assets/Images/website-logo.jpg';
+import  logo  from '../assets/Images/website-logo-circle.png';
 import '../styles/MainPage.css'
 
 const MainPage = () => {
@@ -26,7 +26,7 @@ const MainPage = () => {
               <div className="navbar--item2">
                   <Link to="" className="item2--li">About</Link>
                   <Link to="" className="item2--li">Contact</Link>
-                  <div className="item2--li" onClick={handleShow}>Login/SignUp<FontAwesomeIcon icon={faCaretDown} id="op--icon"/></div>
+                  <div className="item2--li item2--login" onClick={handleShow}>Login/SignUp<FontAwesomeIcon icon={faCaretDown} id="op--icon"/></div>
                   {isOpen && <div className="dropdown--options--box">
                       <Link to="/login" className='dropdown--items'>Student Login</Link>
                       <Link to="/adminLogin" className='dropdown--items'>Admin Login</Link>
@@ -34,10 +34,12 @@ const MainPage = () => {
               </div>
           </div>
           <div className="mainPage--title">
-              <div className="title--logo">
+              {/* <div className="title--logo">
                   <img src={logo} alt="" />
               </div>
-              <div className="title--heading">SGSITS Hostel Management System</div>
+              <div className="title--heading">SGSITS Hostel Management System</div> */}
+              <div className='mainPage--heading' >Let's Make Hostel management Easy</div>
+              <div className="mainPage--subHeading">We are here to provide a simple platform to easily manage and access different resouses provided by hostel Mangement</div>
           </div>
 
       </div>

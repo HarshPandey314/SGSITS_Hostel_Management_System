@@ -26,7 +26,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<div>Hello World</div>} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/mainPage" element={<MainPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/adminLogin" element={<AdminLoginPage />} />
           <Route path="/signUp" element={<SignUp />} />
@@ -38,7 +39,6 @@ function App() {
           <Route path="/status" element={<Status />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/MessMenu" element={<MessMenu />} />
-          <Route path="/mainPage" element={<MainPage />} />
           <Route
           path="/addStudent"
           element={
