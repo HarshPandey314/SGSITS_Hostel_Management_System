@@ -4,6 +4,9 @@
 }
 
 .card--status--title--box {
+  /* border: 2px solid blue; */
+  /* background-color: rgb(23, 188, 230);
+    color: white; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +16,8 @@
 }
 
 .card--title--items {
+  /* border: 2px solid green; */
+  /* margin: 0 4% 0 4%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,4 +61,22 @@
 
 .card--title--status {
   width: 13%;
+  /* background-color: rgb(23, 188, 230); */
+}
+
+.status--btn {
+  /* background-color: rgba(0, 0, 0, 0.776); */
+  padding: 0.6% 0.1% 0.6% 0.1%;
+  /* padding:0.6%; */
+  cursor: pointer;
+}
+
+.status--btn0 {
+  background-color: green;
+  color: white;
+}
+
+.status--btn1 {
+  background-color: red;
+  color: white;
 }

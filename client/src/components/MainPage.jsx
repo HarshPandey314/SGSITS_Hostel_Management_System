@@ -29,7 +29,7 @@ const MainPage = () => {
                   <div className="item2--li" onClick={handleShow}>Login/SignUp<FontAwesomeIcon icon={faCaretDown} id="op--icon"/></div>
                   {isOpen && <div className="dropdown--options--box">
                       <Link to="/login" className='dropdown--items'>Student Login</Link>
-                      <Link to="/login" className='dropdown--items'>Admin Login</Link>
+                      <Link to="/adminLogin" className='dropdown--items'>Admin Login</Link>
                   </div>}
               </div>
           </div>

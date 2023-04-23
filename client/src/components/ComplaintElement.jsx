@@ -1,17 +1,29 @@
 import React from "react";
-import "../styles/ComplaintElement.css";
+import "../styles//ComplaintElement.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 const ComplaintElement = (props) => {
-  const { index, room, hostelbuilding, subject, complaint, status } = props;
+  const {
+    index,
+    room,
+    hostelbuilding,
+    subject,
+    complaint,
+    status,
+    changeStatus,
+    clName,
+  } = props;
+
   function handleStatus() {
     return status == 1 ? "Pending" : "Resolved";
   }
+
   let parity = 1;
   if (index % 2 == 1) {
     parity = 0;
   }
+
   return (
     <div className="card--container">
       <div className={`card--status--title--box bgColor${parity}`}>
@@ -27,7 +39,10 @@ const ComplaintElement = (props) => {
           {complaint}
         </div>
         <div
-          className={`card--title--items card--title--status bullet${status}`}
+          className={`card--title--items card--title--status ${
+            clName + status
+          } ${clName}`}
+          onClick={() => changeStatus(index)}
         >
           {handleStatus()}
         </div>
