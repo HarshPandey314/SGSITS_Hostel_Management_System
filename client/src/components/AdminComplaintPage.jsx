@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ComplaintElement from "./ComplaintElement";
 import AdminMenu from "./AdminMenu";
 import "../styles/AdminComplaintPage.css";
@@ -6,93 +6,45 @@ import "../styles/AdminComplaintPage.css";
 const AdminComplaintPage = (props) => {
   const { type, setType, hostel, setHostel, Id, setId } = props;
 
-  const complaintArray = [
-    {
-      complaint:
-        "Room Bohot Garam h Cooler free mein lagwao sngjd sdgnj dsjgkn sdgjnsdng sdgnjdfsn gsfsgnjsfnd gsk",
-      contact: "7828933347",
-      enrollment: "0801IT201040",
-      fullname: "Garvit Prasad",
-      hostelbuilding: "JCBoseBoysHostel",
-      room: "S-95",
-      subject: "others",
-      status: "1",
-    },
-    {
-      complaint: "Fan is not working",
-      contact: "7828933347",
-      enrollment: "0801IT201040",
-      fullname: "Garvit Prasad",
-      hostelbuilding: "HBhabhaBoysHostel",
-      room: "S-95",
-      subject: "electricity",
-      status: "0",
-    },
-    {
-      complaint: "Bekar khaana",
-      contact: "7828933347",
-      enrollment: "0801IT201040",
-      fullname: "Garvit",
-      hostelbuilding: "JCBoseBoysHostel",
-      room: "S-95",
-      subject: "foodQuality",
-      status: "0",
-    },
-    {
-      complaint: "Window Broken",
-      contact: "7828933347",
-      enrollment: "0801IT201040",
-      fullname: "Garvit Prasad",
-      hostelbuilding: "JCBoseBoysHostel",
-      room: "S-95",
-      subject: "CarpentryWork",
-      status: "1",
-    },
-    {
-      complaint: "Room Bohot Garam h ",
-      contact: "7828933347",
-      enrollment: "0801IT201040",
-      fullname: "Garvit Prasad",
-      hostelbuilding: "JCBoseBoysHostel",
-      room: "S-95",
-      subject: "others",
-      status: "1",
-    },
-    {
-      complaint: "Fan is not working",
-      contact: "7828933347",
-      enrollment: "0801IT201040",
-      fullname: "Garvit Prasad",
-      hostelbuilding: "HBhabhaBoysHostel",
-      room: "S-95",
-      subject: "electricity",
-      status: "0",
-    },
-    {
-      complaint: "Bekar khaana",
-      contact: "7828933347",
-      enrollment: "0801IT201040",
-      fullname: "Garvit",
-      hostelbuilding: "JCBoseBoysHostel",
-      room: "S-95",
-      subject: "foodQuality",
-      status: "0",
-    },
-    {
-      complaint: "Window Broken",
-      contact: "7828933347",
-      enrollment: "0801IT201040",
-      fullname: "Garvit Prasad",
-      hostelbuilding: "JCBoseBoysHostel",
-      room: "S-95",
-      subject: "CarpentryWork",
-      status: "0",
-    },
-  ];
+  const [complaintArray, setComplaintArray] = useState([{}]);
 
-  const changeStatus = (index) => {
-    // console.log(index);
-  };
+  useEffect(() => {
+    getComplaintByType();
+  }, []);
+
+  async function getComplaintByType(event) {
+    console.log(hostel);
+    console.log(type);
+    const response = await fetch(
+      "http://localhost:3000/api/getComplaintByType",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          type,
+          hostel,
+        }),
+      }
+    );
+    const data = await response.json();
+    setComplaintArray(data);
+  }
+
+  async function changeStatus(index) {
+    console.log(index);
+    const response = await fetch("http://localhost:3000/api/updateComplaint", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(complaintArray[index - 1]),
+    });
+    const data = await response.json();
+    setComplaintArray(data);
+    console.log(data);
+  }
 
   const complaintCards = complaintArray.map((card, index) => {
     // console.log(card.room)

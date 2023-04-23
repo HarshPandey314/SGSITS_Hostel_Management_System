@@ -76,7 +76,7 @@ export default function AdminMenu(props) {
           id={2}
         >
           <FontAwesomeIcon icon={faBolt} className="adminMenu--items--icons" />
-          Electricity
+          electricity
         </Link>
       </div>
       <div className="adminMenu--items--box">

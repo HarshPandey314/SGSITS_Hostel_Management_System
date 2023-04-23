@@ -35,18 +35,18 @@ const AdminHomePage = (props) => {
         <div className="admin--cards--div">
           <div className="card--box">
             <div className="hostel--card" onClick={changeHostel}>
-              M Visvesvaraya Boys Hostel
+              M.Visvesvaraya.Boys.Hostel
             </div>
             <div className="hostel--card" onClick={changeHostel}>
-              C V Raman Boys Hostel
+              C.V.Raman.Boys.Hostel
             </div>
           </div>
           <div className="card--box">
             <div className="hostel--card" onClick={changeHostel}>
-              J.C. Bose Boys Hostel
+              J.C.Bose.Boys.Hostel
             </div>
             <div className="hostel--card" onClick={changeHostel}>
-              H Bhabha Boys Hostel
+              H.Bhabha.Boys.Hostel
             </div>
           </div>
         </div>
