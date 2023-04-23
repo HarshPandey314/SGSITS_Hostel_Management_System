@@ -1,0 +1,99 @@
+.admin--container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.admin--rightSection {
+    /* border: 2px solid red; */
+    background: url("../assets/Images/loginPage-image3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+}
+
+.admin--rightSection--heading {
+    /* border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12%;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.admin--addStudent--div
+{
+    /* border:2px solid blue; */
+    padding: 1% 5% 1% 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width:94%;
+}
+.admin--addStudent
+{
+    /* border:2px solid blue; */
+    display:flex;
+    background-color: rgb(3, 175, 254);
+    color:white;
+    padding:1.2%;
+    font-size:1.1em;
+    width: 15%;
+    text-decoration: none;
+}
+
+.add--icon
+{
+    padding-right:2%;
+    font-size: 1.1em;
+}
+
+.admin--cards--div
+{
+    /* border:2px solid red; */
+    height:70%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    padding-top: 2%;
+}
+
+
+.card--box
+{
+    /* border:2px solid black; */
+    /* background-color: black; */
+    height:45%;
+    width:60%;
+    display:flex;
+    padding: 0.2%;
+    margin-left: 19%;
+    
+}
+.hostel--card
+{   
+    /* border:2px solid blue; */
+    border-radius: 8px;
+    box-shadow: grey 4px 4px 10px;
+    background: url("../assets/Images/hostelCardBackground5.jpg");
+    background-position: centre;
+    background-repeat: none;
+    background-size: cover;
+    color:white;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    margin:2%;
+    padding-left:2%;
+    font-size: 1.1em;
+    cursor:pointer;
+}
+.hostel--card:hover
+{
+    /* opacity:0.9; */
+    box-shadow: grey 2px 2px 4px;
+}

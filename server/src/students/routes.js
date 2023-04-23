@@ -10,5 +10,8 @@ router.post("/getcomplaint", controller.getComplaint);
 router.get("/gettitle", controller.getTitle);
 router.post("/getlinks", controller.getLinks);
 router.post("/addlinks", controller.addLinks);
+router.post("/addStudent", controller.addStudent);
+router.post("/getComplaintByType", controller.getComplaintByType);
+router.post("/updateComplaint", controller.updateComplaint);
 
 module.exports = router;

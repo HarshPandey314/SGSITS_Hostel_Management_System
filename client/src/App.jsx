@@ -11,14 +11,25 @@ import Status from "./components/Status";
 import "./App.css";
 import GalleryPage from "./components/GalleryPage";
 import MessMenu from "./components/MessMenu";
+import MainPage from "./components/MainPage";
+import AddStudentPage from "./components/AddStudentPage";
+import AdminComplaintPage from './components/AdminComplaintPage'
+import AdminHomePage from "./components/AdminHomePage";
+import AdminLoginPage from "./components/AdminLoginPage";
 
 function App() {
+  const [type, setType] = useState("");
+  const [hostel, setHostel] = useState("");
+  const [Id, setId] = useState(0);
+
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<div>Hello World</div>} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/mainPage" element={<MainPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/adminLogin" element={<AdminLoginPage />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/otpverification" element={<OtpVerification />} />
           <Route path="/addComplaint" element={<AddComplaint />} />
@@ -28,6 +39,45 @@ function App() {
           <Route path="/status" element={<Status />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/MessMenu" element={<MessMenu />} />
+          <Route
+          path="/addStudent"
+          element={
+            <AddStudentPage
+              type={type}
+              setType={setType}
+              hostel={hostel}
+              setHostel={setHostel}
+              Id={Id}
+              setId={setId}
+            />
+          }
+        ></Route>
+        <Route
+          path="/adminComplaint"
+          element={
+            <AdminComplaintPage
+              type={type}
+              setType={setType}
+              hostel={hostel}
+              setHostel={setHostel}
+              Id={Id}
+              setId={setId}
+            />
+          }
+        ></Route>
+        <Route
+          path="/adminHomePage"
+          element={
+            <AdminHomePage
+              type={type}
+              setType={setType}
+              hostel={hostel}
+              setHostel={setHostel}
+              Id={Id}
+              setId={setId}
+            />
+          }
+        ></Route>
         </Routes>
       </BrowserRouter>
     </div>

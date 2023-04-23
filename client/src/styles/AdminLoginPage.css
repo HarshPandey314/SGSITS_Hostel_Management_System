@@ -1,0 +1,115 @@
+.admin--login--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../assets/Images/loginPage-image3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.admin--login--box {
+    /* border: 2px solid black; */
+}
+
+.admin--null {
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+
+.admin--login--form {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border-radius: 2vh;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 25vw;
+    height: 48vh;
+    padding: 1vh 4vw 3vh 4vw;
+}
+
+.admin--heading1 {
+    display: block;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.admin--input--box {
+    padding-bottom: 1vh;
+    width: 100%;
+}
+
+.admin--heading--input {
+    font-size: 2.2vh;
+    font-weight: 200;
+    padding: 1vh 0 0.7vh 0;
+}
+
+.admin--input--container {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 0.4vw;
+    padding: 1vh 0.4vw 1vh 0.4vw;
+    margin-bottom: 1.5vh;
+}
+
+.admin--input--container:hover {
+    border: 1px solid blue;
+}
+
+.admin--form--input {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.admin--icon {
+    margin-right: 0.4vw;
+}
+
+.admin--submit--btn {
+    text-align: center;
+    margin: 2vh 0 5vh 0;
+}
+
+.admin--submit--btn>input:hover {
+    background-color: #f8cfa0ae;
+}
+
+.admin--submit--btn>input {
+    font-size: 3vh;
+    background-color: #fcf4c3;
+    border: none;
+    color: rgb(169, 60, 169);
+    width: 15vw;
+    height: 4.5vh;
+    border-radius: 2vh;
+    cursor: pointer;
+    font-weight: 150;
+}
+
+.admin--heading--bottom {}
+
+.admin--heading2 {
+    font-size: 2vh;
+    font-weight: bold;
+    float: left;
+}
+
+.admin--heading3 {
+    font-size: 2vh;
+    font-weight: bold;
+    float: right;
+}
