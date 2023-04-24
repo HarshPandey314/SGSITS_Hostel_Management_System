@@ -19,27 +19,17 @@ import dp from "../assets/Images/change-photo.jpg";
 import "../styles/AdminMenu.css";
 
 export default function AdminMenu(props) {
-  // const { item } = props;
-
-  // useEffect(() => {
-  //     // console.log(item);
-  //     let menuItem = document.querySelector(`#${item}`);
-  //     menuItem.style.backgroundColor = "wheat";
-  //     menuItem.style.color = "black";
-  // }, [props])
-
   const [adminDetails] = [
     {
-      id: "0801IT201040",
-      firstname: "Garvit",
-      lastname: "Prasad",
+      id: "gs2010869",
+      firstname: "Hostel",
+      lastname: "Admin",
       status: 1,
       gsuitid: "gs2013061@sgsitsindore.in",
       password: "123456",
       room: "S-95",
     },
   ];
-
   const enrollment = adminDetails.id;
   const fullName = adminDetails.firstname + " " + adminDetails.lastname;
   const { type, setType, Id, setId } = props;
@@ -48,8 +38,6 @@ export default function AdminMenu(props) {
     setType((prev) => event.target.textContent);
     setId(event.target.id);
   };
-  //   console.log(type);
-
   return (
     <div className="adminMenu--container">
       <div className="adminMenu--heading">
@@ -123,7 +111,7 @@ export default function AdminMenu(props) {
       </div>
       <div className="adminMenu--items--box">
         <Link
-          to="/adminHomePage"
+          to="/"
           className={`adminMenu--items ${Id == 6 ? "bgColor" : ""}`}
           onClick={changeType}
           id={6}
