@@ -61,9 +61,9 @@ const ComplaintElement = (props) => {
             {currentState}
           </div>
           { showBox && page === "admin" && <div className="dropDown--box">
-       {status !=1 && <div className="dropDown--box--items color1" onClick={changeStatus(index,1)} >Pending</div>}
-       {status !=2 && <div className="dropDown--box--items color2" onClick={changeStatus(index,2)} >Ongoing</div>}
-       {status !=0 && <div className="dropDown--box--items color0" onClick={changeStatus(index,0)} >Resolved</div>}
+       {status !=1 && <div className="dropDown--box--items color1" onClick={()=>changeStatus(index,1)} >Pending</div>}
+       {status !=2 && <div className="dropDown--box--items color2" onClick={()=>changeStatus(index,2)} >Ongoing</div>}
+       {status !=0 && <div className="dropDown--box--items color0" onClick={()=>changeStatus(index,0)} >Resolved</div>}
      </div>}
         
         </div>
