@@ -24,17 +24,17 @@ const ComplaintElement = (props) => {
   else if (status == 1) currentState = "Pending";
   else currentState = "Ongoing";
 
-  const displayDropDown = () => {
-    console.log("sfsd");
-    return "Hello World";
-    return (
-       <div className="dropDown--box">
-       {status !=1 && <div className="dropDown--box--items color1">Pending</div>}
-       {status !=2 && <div className="dropDown--box--items color2">Ongoing</div>}
-       {status !=0 && <div className="dropDown--box--items color0">Resolved</div>}
-     </div>
-     )
-   } 
+  // const displayDropDown = () => {
+  //   console.log("sfsd");
+  //   return "Hello World";
+  //   return (
+  //      <div className="dropDown--box">
+  //      {status !=1 && <div className="dropDown--box--items color1">Pending</div>}
+  //      {status !=2 && <div className="dropDown--box--items color2">Ongoing</div>}
+  //      {status !=0 && <div className="dropDown--box--items color0">Resolved</div>}
+  //    </div>
+  //    )
+  //  } 
   
 
   let parity = 1;
