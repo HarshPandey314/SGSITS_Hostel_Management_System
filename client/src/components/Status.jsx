@@ -59,6 +59,7 @@ const Status = () => {
                   subject={card.subject}
                   status={card.status}
                   index={index}
+                  clName={"no--btn"}
                 />
               ))}
             </div>

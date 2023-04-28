@@ -7,6 +7,7 @@ const AdminComplaintPage = (props) => {
   const { type, setType, hostel, setHostel, Id, setId } = props;
 
   const [complaintArray, setComplaintArray] = useState([{}]);
+  
 
   useEffect(() => {
     getComplaintByType();
@@ -43,7 +44,7 @@ const AdminComplaintPage = (props) => {
     });
     const data = await response.json();
     setComplaintArray(data);
-    console.log(data);
+    // console.log(data);
   }
 
   const complaintCards = complaintArray.map((card, index) => {
@@ -59,6 +60,7 @@ const AdminComplaintPage = (props) => {
         index={index + 1}
         changeStatus={changeStatus}
         clName={"status--btn"}
+        page={"admin"}
       />
     );
   });
