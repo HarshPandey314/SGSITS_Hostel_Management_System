@@ -90,6 +90,10 @@
   background-color: red;
   color: white;
 }
+.status--btn2 {
+  background-color: grey;
+  color: white;
+}
 
 .no--btn0
 {
@@ -98,6 +102,10 @@
 .no--btn1
 {
   color:red;
+}
+.n---btn2
+{
+  color: grey;
 }
 
 .dropDown--box
