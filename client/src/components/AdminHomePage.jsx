@@ -3,7 +3,7 @@ import AdminMenu from "./AdminMenu";
 import "../styles/AdminHomePage.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faFileLines, faUser } from "@fortawesome/free-solid-svg-icons";
 
 const AdminHomePage = (props) => {
   const navigate = useNavigate();
@@ -19,10 +19,21 @@ const AdminHomePage = (props) => {
       <AdminMenu type={type} setType={setType} Id={Id} setId={setId} />
       <div className="admin--rightSection">
         <div className="admin--rightSection--heading">Welcome Admin</div>
-        <div className="admin--addStudent--div">
+        <div className="admin--addItem--div">
+          <Link
+            to="/addNotice"
+            className="admin--addItem"
+            onClick={() => setId(1)}
+          >
+            <FontAwesomeIcon
+              icon={faFileLines}
+              className="add--icon"
+            ></FontAwesomeIcon>{" "}
+            Add Notice
+          </Link>
           <Link
             to="/addStudent"
-            className="admin--addStudent"
+            className="admin--addItem"
             onClick={() => setId(1)}
           >
             <FontAwesomeIcon

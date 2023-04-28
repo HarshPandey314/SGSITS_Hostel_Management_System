@@ -24,7 +24,7 @@
     font-weight: bold;
 }
 
-.admin--addStudent--div
+.admin--addItem--div
 {
     /* border:2px solid blue; */
     padding: 1% 5% 1% 0;
@@ -33,21 +33,24 @@
     justify-content: end;
     width:94%;
 }
-.admin--addStudent
+.admin--addItem
 {
     /* border:2px solid blue; */
     display:flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(3, 175, 254);
     color:white;
     padding:1.2%;
     font-size:1.1em;
     width: 15%;
     text-decoration: none;
+    margin-right: 1%;
 }
 
 .add--icon
 {
-    padding-right:2%;
+    margin-right:6%;
     font-size: 1.1em;
 }
 

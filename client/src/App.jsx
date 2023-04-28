@@ -16,6 +16,7 @@ import AddStudentPage from "./components/AddStudentPage";
 import AdminComplaintPage from './components/AdminComplaintPage'
 import AdminHomePage from "./components/AdminHomePage";
 import AdminLoginPage from "./components/AdminLoginPage";
+import AddNoticePage from "./components/AddNoticePage";
 
 function App() {
   const [type, setType] = useState("");
@@ -43,6 +44,19 @@ function App() {
           path="/addStudent"
           element={
             <AddStudentPage
+              type={type}
+              setType={setType}
+              hostel={hostel}
+              setHostel={setHostel}
+              Id={Id}
+              setId={setId}
+            />
+          }
+        ></Route>
+          <Route
+          path="/addNotice"
+          element={
+            <AddNoticePage
               type={type}
               setType={setType}
               hostel={hostel}
