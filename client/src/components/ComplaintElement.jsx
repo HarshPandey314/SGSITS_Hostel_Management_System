@@ -13,12 +13,11 @@ const ComplaintElement = (props) => {
     status,
     changeStatus,
     clName,
-    page
+    page,
   } = props;
 
   const [showBox, setShowBox] = useState(false);
 
-  
   let currentState;
   if (status == 0) currentState = "Resolved";
   else if (status == 1) currentState = "Pending";
@@ -34,8 +33,7 @@ const ComplaintElement = (props) => {
   //      {status !=0 && <div className="dropDown--box--items color0">Resolved</div>}
   //    </div>
   //    )
-  //  } 
-  
+  //  }
 
   let parity = 1;
   if (index % 2 == 1) {
@@ -57,15 +55,40 @@ const ComplaintElement = (props) => {
           {complaint}
         </div>
         <div className={`card--title--items card--title--status  ${clName}`}>
-          <div className={`card--status--display ${clName + status}`} onClick={() => setShowBox(prev => !prev)}>
+          <div
+            className={`card--status--display ${clName + status}`}
+            onClick={() => setShowBox((prev) => !prev)}
+          >
             {currentState}
           </div>
-          { showBox && page === "admin" && <div className="dropDown--box">
-       {status !=1 && <div className="dropDown--box--items color1" onClick={()=>changeStatus(index,1)} >Pending</div>}
-       {status !=2 && <div className="dropDown--box--items color2" onClick={()=>changeStatus(index,2)} >Ongoing</div>}
-       {status !=0 && <div className="dropDown--box--items color0" onClick={()=>changeStatus(index,0)} >Resolved</div>}
-     </div>}
-        
+          {showBox && page === "admin" && (
+            <div className="dropDown--box">
+              {status != 1 && (
+                <div
+                  className="dropDown--box--items color1"
+                  onClick={() => changeStatus(index, 1)}
+                >
+                  Pending
+                </div>
+              )}
+              {status != 2 && (
+                <div
+                  className="dropDown--box--items color2"
+                  onClick={() => changeStatus(index, 2)}
+                >
+                  Ongoing
+                </div>
+              )}
+              {status != 0 && (
+                <div
+                  className="dropDown--box--items color0"
+                  onClick={() => changeStatus(index, 0)}
+                >
+                  Resolved
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>

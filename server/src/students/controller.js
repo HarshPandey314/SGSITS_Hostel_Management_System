@@ -176,9 +176,11 @@ const getComplaintByType = (req, res) => {
 };
 const updateComplaint = (req, res) => {
   console.log(req.body);
+  console.log("controller log");
   pool.query(
     queries.updateComplaint,
     [
+      req.body.statusCode,
       req.body.enrollment,
       req.body.complaint,
       req.body.contact,
