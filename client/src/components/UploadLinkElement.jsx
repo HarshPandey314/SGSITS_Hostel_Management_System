@@ -11,13 +11,15 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const UploadLinkElement = (props) => {
-  const [title, setTitle] = useState("");
+  // const [title, setTitle] = useState("");
+  const { title, setTitle } = props;
   const [link, setLink] = useState("");
   const hideBox = () => {
     props.setIsShow(0);
-    props.setTitle("");
-    props.setTemp([]);
+    // props.setTitle("");
+    // props.setTemp([]);
   };
+
   async function addLink(event) {
     event.preventDefault();
     const response = await fetch("http://localhost:3000/api/addlinks", {

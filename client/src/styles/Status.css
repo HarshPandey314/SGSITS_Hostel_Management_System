@@ -46,6 +46,7 @@
   width: 90%;
   height: 90%;
   margin-top: -2%;
+  overflow-y: auto;
 }
 
 .status--title--box {

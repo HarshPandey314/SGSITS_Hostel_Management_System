@@ -10,11 +10,11 @@ const AdminComplaintPage = (props) => {
 
   useEffect(() => {
     getComplaintByType();
-  }, []);
+  }, [complaintArray]);
 
   async function getComplaintByType(event) {
-    console.log(hostel);
-    console.log(type);
+    // console.log(hostel);
+    // console.log(type);
     const response = await fetch(
       "http://localhost:3000/api/getComplaintByType",
       {
