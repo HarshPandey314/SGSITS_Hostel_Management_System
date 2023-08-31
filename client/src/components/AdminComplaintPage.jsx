@@ -7,7 +7,6 @@ const AdminComplaintPage = (props) => {
   const { type, setType, hostel, setHostel, Id, setId } = props;
 
   const [complaintArray, setComplaintArray] = useState([{}]);
-  
 
   useEffect(() => {
     getComplaintByType();
@@ -33,18 +32,19 @@ const AdminComplaintPage = (props) => {
     setComplaintArray(data);
   }
 
-  async function changeStatus(index) {
-    console.log(index);
+  async function changeStatus(index, statusCode) {
     const response = await fetch("http://localhost:3000/api/updateComplaint", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(complaintArray[index - 1]),
+      body: JSON.stringify({
+        ...complaintArray[index - 1],
+        statusCode: `${statusCode}`,
+      }),
     });
     const data = await response.json();
     setComplaintArray(data);
-    // console.log(data);
   }
 
   const complaintCards = complaintArray.map((card, index) => {

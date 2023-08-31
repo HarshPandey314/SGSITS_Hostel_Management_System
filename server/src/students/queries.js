@@ -11,7 +11,7 @@ const addStudent = "INSERT INTO students VALUES($1,$2,$3,'1',$4,'xxxx',$5);";
 const getComplaintByType =
   "SELECT * from complaints WHERE subject=$1 AND hostelbuilding=$2;";
 const updateComplaint =
-  "UPDATE complaints SET status='0' WHERE enrollment=$1 AND complaint=$2 AND contact=$3 AND fullName = $4 AND hostelBuilding = $5 AND room = $6 AND subject=$7;";
+  "UPDATE complaints SET status=$1 WHERE enrollment=$2 AND complaint=$3 AND contact=$4 AND fullName = $5 AND hostelBuilding = $6 AND room = $7 AND subject=$8;";
 
 module.exports = {
   GetStudentById,

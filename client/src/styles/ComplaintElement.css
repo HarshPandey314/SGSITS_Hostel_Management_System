@@ -39,6 +39,11 @@
   color: red;
   width: 20%;
 }
+.bullet2
+{
+  color:rgb(255, 235, 20);
+  width: 20%;
+}
 
 .card--title--sn {
   width: 8%;
@@ -91,7 +96,7 @@
   color: white;
 }
 .status--btn2 {
-  background-color: grey;
+  background-color: rgb(255, 235, 20);
   color: white;
 }
 
@@ -103,9 +108,9 @@
 {
   color:red;
 }
-.n---btn2
+.no--btn2
 {
-  color: grey;
+  color: rgb(255, 235, 20);
 }
 
 .dropDown--box
@@ -141,5 +146,6 @@
 }
 .color2
 {
-  background-color: grey;
+  background-color: rgb(255, 235, 20);
+  /* background-color: #F5D63D; */
 }
