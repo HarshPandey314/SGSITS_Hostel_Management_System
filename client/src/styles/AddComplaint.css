@@ -74,7 +74,7 @@
 }
 
 .item--input {
-  border: 1px solid grey;
+  border: 1px solid rgb(23, 188, 230);
   padding: 4%;
   margin-top: 2%;
 }
@@ -100,7 +100,7 @@
 } */
 
 .item--input--select {
-  border: 1px solid grey;
+  border: 1px solid rgb(23, 188, 230);
   padding: 0 0 0 4%;
   margin-top: 2%;
   /* height: 5vh; */
@@ -137,7 +137,7 @@
 }
 
 .item--input2 {
-  border: 1px solid grey;
+  border: 1px solid rgb(23, 188, 230);
   margin-top: 0.8%;
 }
 
