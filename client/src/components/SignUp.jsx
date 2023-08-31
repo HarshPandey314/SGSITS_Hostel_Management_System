@@ -41,7 +41,7 @@ const SignUpPage = () => {
     } else if (data.length == 1 && data[0].status == "0") {
       alert("Account Already Exist");
     } else {
-      alert("Tatta Spotted");
+      alert("You are not a hosteller");
     }
   }
   async function SignUpUser() {

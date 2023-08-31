@@ -10,6 +10,7 @@ const GalleryPage = () => {
   useEffect(() => {
     getTitle();
   }, [temp]);
+
   async function getTitle() {
     const response = await fetch("http://localhost:3000/api/gettitle", {
       method: "GET",
@@ -21,6 +22,7 @@ const GalleryPage = () => {
     if (data.length != temp.length) {
       setTemp(data);
     }
+
     for (let i = 0; i < temp.length; i++) {
       const res = await fetch("http://localhost:3000/api/getlinks", {
         method: "POST",
@@ -32,13 +34,14 @@ const GalleryPage = () => {
         }),
       });
       const links = await res.json();
+      console.log(links);
       const helper = [];
       for (let j = 0; j < links.length; j++) {
         helper.push(links[j].links);
       }
       temp[i].linksArray = helper;
     }
-    console.log(temp);
+    // console.log(temp);
     setGalleryArray(temp);
   }
 
@@ -49,8 +52,8 @@ const GalleryPage = () => {
     setIsShow(1);
   };
   function showBox2(title1) {
-    setIsShow(1);
     setTitle(title1);
+    setIsShow(1);
   }
 
   const ElementArray = GalleryArray.map((card) => {
@@ -71,7 +74,7 @@ const GalleryPage = () => {
           <Link
             to="/gallery"
             className="gallery--add--btn"
-            onClick={() => showBox2(title)}
+            onClick={() => showBox2(card.title)}
           >
             Add Link
           </Link>
