@@ -114,23 +114,29 @@ const AddComplaint = () => {
                       <option value="selectHostel" className="select--options">
                         --Select Hostel--
                       </option>
-                      <option value="mvBoysHostel" className="select--options">
-                        M Visvesvaraya Boys Hostel
-                      </option>
-                      <option value="cvBoysHostel" className="select--options">
-                        C V Raman Boys Hostel
-                      </option>
                       <option
-                        value="hBhabhaBoysHostel"
+                        value="M.Visvesvaraya.Boys.Hostel"
                         className="select--options"
                       >
-                        H Bhabha Boys Hostel
+                        M.Visvesvaraya.Boys.Hostel
                       </option>
                       <option
-                        value="JCBoseBoysHostel"
+                        value="C.V.Raman.Boys.Hostel"
                         className="select--options"
                       >
-                        J C Bose Boys Hostel
+                        C.V.Raman.Boys.Hostel
+                      </option>
+                      <option
+                        value="H.Bhabha.Boys.Hostel"
+                        className="select--options"
+                      >
+                        H.Bhabha.Boys.Hostel
+                      </option>
+                      <option
+                        value="J.C.Bose.Boys.Hostel"
+                        className="select--options"
+                      >
+                        J.C.Bose.Boys.Hostel
                       </option>
                     </select>
                   </div>
@@ -165,14 +171,17 @@ const AddComplaint = () => {
                       <option value="electricity" className="select--options">
                         Electricity
                       </option>
-                      <option value="foodQuality" className="select--options">
-                        Quality of Food
+                      <option value="Food Quality" className="select--options">
+                        Food Quality
                       </option>
-                      <option value="CarpentryWork" className="select--options">
+                      <option
+                        value="Carpentry Work"
+                        className="select--options"
+                      >
                         Carpentry Work
                       </option>
-                      <option value="others" className="select--options">
-                        Other
+                      <option value="Others" className="select--options">
+                        Others
                       </option>
                     </select>
                   </div>

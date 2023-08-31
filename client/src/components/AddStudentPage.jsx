@@ -14,8 +14,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AdminMenu from "./AdminMenu";
+import { useNavigate } from "react-router-dom";
 
 const AddStudentPage = (props) => {
+  const navigate = useNavigate();
   const { type, setType, hostel, setHostel, Id, setId } = props;
   const [formData, setFormData] = useState({
     firstName: "",
@@ -26,8 +28,6 @@ const AddStudentPage = (props) => {
     email: "",
   });
 
-  //   console.log(formData);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => {
@@ -35,7 +35,19 @@ const AddStudentPage = (props) => {
     });
   };
 
-  // console.log(formData)
+  async function addStudent(event) {
+    event.preventDefault();
+    const response = await fetch("http://localhost:3000/api/addStudent", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const data = await response.json();
+    console.log(data);
+    navigate("/addStudent");
+  }
 
   return (
     <div className="addS--container">
@@ -44,7 +56,7 @@ const AddStudentPage = (props) => {
         <div className="addS--rightSection--heading">Add Student</div>
         <div className="addS--rightSection--content">
           <div className="addS--form--div">
-            <form action="" className="addS--form">
+            <form onSubmit={addStudent} className="addS--form">
               <div className="addS--form--box">
                 <div className="addS--box--item">
                   <label htmlFor="">First Name</label>

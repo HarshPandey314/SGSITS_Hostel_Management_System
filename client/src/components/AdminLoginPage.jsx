@@ -3,7 +3,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faList, faList12, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faList,
+  faList12,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import "../styles/AdminLoginPage.css";
 
@@ -11,38 +16,19 @@ const AdminLoginPage = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  // async function loginUser(event) {
-  //   event.preventDefault();
-  //   console.log("login function working");
-  //   const response = await fetch("http://localhost:3000/api/login", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       enrollmentNo,
-  //       password,
-  //     }),
-  //   });
-  //   const data = await response.json();
-  //   // console.log(data[0]);
-  //   if (
-  //     data[0].status == "0" &&
-  //     data[0].password == password &&
-  //     data[0].id == enrollmentNo
-  //   ) {
-  //     localStorage.setItem("dataKey", JSON.stringify(data[0]));
-  //     localStorage.setItem("dataKey2", JSON.stringify(data[0].id));
-  //     navigate("/homePage");
-  //   } else {
-  //     alert("Please check your username and password");
-  //   }
-  // }
+
+  function verifyAdmin() {
+    if (userName == "gshosteladmin" && password == "12345678") {
+      navigate("/adminHomePage");
+    } else {
+      alert("chekc username or password");
+    }
+  }
 
   return (
     <div className="admin--login--container">
       <div className="admin--login--box">
-        <form onSubmit="" className="admin--login--form">
+        <form onSubmit={verifyAdmin} className="admin--login--form">
           <div className="admin--null">
             <div className="admin--heading1">Admin Login</div>
             <div className="admin--input--box">
@@ -55,7 +41,7 @@ const AdminLoginPage = () => {
                   value={userName}
                   type="text"
                   onChange={(e) => {
-                    setEnrollmentNo(e.target.value);
+                    setUserName(e.target.value);
                   }}
                   placeholder="User Name"
                   className="admin--form--input"

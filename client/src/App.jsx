@@ -16,6 +16,7 @@ import AddStudentPage from "./components/AddStudentPage";
 import AdminComplaintPage from './components/AdminComplaintPage'
 import AdminHomePage from "./components/AdminHomePage";
 import AdminLoginPage from "./components/AdminLoginPage";
+import AddNoticePage from "./components/AddNoticePage";
 
 function App() {
   const [type, setType] = useState("");
@@ -26,7 +27,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<div>Hello World</div>} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/mainPage" element={<MainPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/adminLogin" element={<AdminLoginPage />} />
           <Route path="/signUp" element={<SignUp />} />
@@ -38,11 +40,23 @@ function App() {
           <Route path="/status" element={<Status />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/MessMenu" element={<MessMenu />} />
-          <Route path="/mainPage" element={<MainPage />} />
           <Route
           path="/addStudent"
           element={
             <AddStudentPage
+              type={type}
+              setType={setType}
+              hostel={hostel}
+              setHostel={setHostel}
+              Id={Id}
+              setId={setId}
+            />
+          }
+        ></Route>
+          <Route
+          path="/addNotice"
+          element={
+            <AddNoticePage
               type={type}
               setType={setType}
               hostel={hostel}

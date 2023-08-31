@@ -148,6 +148,51 @@ const addLinks = (req, res) => {
     res.status(200).json(response.rows);
   });
 };
+const addStudent = (req, res) => {
+  pool.query(
+    queries.addStudent,
+    [
+      req.body.enrollment,
+      req.body.firstName,
+      req.body.lastName,
+      req.body.email,
+      req.body.room,
+    ],
+    (error, response) => {
+      if (error) throw error;
+      res.status(200).json(response.rows);
+    }
+  );
+};
+const getComplaintByType = (req, res) => {
+  pool.query(
+    queries.getComplaintByType,
+    [req.body.type, req.body.hostel],
+    (error, response) => {
+      if (error) throw error;
+      res.status(200).json(response.rows);
+    }
+  );
+};
+const updateComplaint = (req, res) => {
+  console.log(req.body);
+  pool.query(
+    queries.updateComplaint,
+    [
+      req.body.enrollment,
+      req.body.complaint,
+      req.body.contact,
+      req.body.fullname,
+      req.body.hostelbuilding,
+      req.body.room,
+      req.body.subject,
+    ],
+    (error, response) => {
+      if (error) throw error;
+      res.status(200).json(response.rows);
+    }
+  );
+};
 module.exports = {
   getStudents,
   getStudentsById,
@@ -158,4 +203,7 @@ module.exports = {
   getTitle,
   getLinks,
   addLinks,
+  addStudent,
+  getComplaintByType,
+  updateComplaint,
 };

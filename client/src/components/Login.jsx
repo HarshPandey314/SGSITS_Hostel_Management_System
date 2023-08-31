@@ -11,6 +11,7 @@ const LoginPage = () => {
   const [enrollmentNo, setEnrollmentNo] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   async function loginUser(event) {
     event.preventDefault();
     console.log("login function working");

@@ -1,6 +1,7 @@
 .card--container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .card--status--title--box {
@@ -62,12 +63,21 @@
 .card--title--status {
   width: 13%;
   /* background-color: rgb(23, 188, 230); */
+  display: flex;
+  flex-direction: column;
 }
 
+.card--status--display
+{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 2.5% 0.1% 2.5% 0.1%;
+}
 .status--btn {
   /* background-color: rgba(0, 0, 0, 0.776); */
-  padding: 0.6% 0.1% 0.6% 0.1%;
-  /* padding:0.6%; */
   cursor: pointer;
 }
 
@@ -79,4 +89,57 @@
 .status--btn1 {
   background-color: red;
   color: white;
+}
+.status--btn2 {
+  background-color: grey;
+  color: white;
+}
+
+.no--btn0
+{
+  color: green;
+}
+.no--btn1
+{
+  color:red;
+}
+.n---btn2
+{
+  color: grey;
+}
+
+.dropDown--box
+{
+  /* border:2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.dropDown--box--items
+{
+  /* border: 1px solid blue; */
+  width: 100%;
+  padding: 2.5% 0.1% 2.5% 0.1%;
+  text-align: center;
+  color:white;
+}
+.dropDown--box--items:hover
+{
+  background-color: rgb(23, 188, 230);
+  
+}
+.color0
+{
+  background-color: green;
+}
+.color1
+{
+  background-color: red;
+}
+.color2
+{
+  background-color: grey;
 }

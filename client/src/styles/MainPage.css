@@ -1,9 +1,10 @@
 .mainPage--container {
-    background: url("../assets/Images/loginPage-image3.jpg");
+    background: url("../assets/Images/hostelCardBackground5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .mainPage--navbar {
@@ -11,17 +12,22 @@
     color: white;
     /* background-color: #3A3B3C; */
     display: flex;
-    width: 100%;
-    padding: 1vh 0 1vh 0;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    height:5%;
+    padding: 1% 1% 1% 1%;
+    font-size: 1.1em;
 }
 
 .navbar--item1 {
     /* border: 2px solid red; */
-    display: flex;
+    display:flex;
     align-items: center;
-    justify-content: center;
-    padding-left: 3vw;
-    padding-right: 48vw;
+    justify-content:center;
+    margin-left:2%;
+    margin-right: 2%;
 }
 
 .logo--img {
@@ -39,44 +45,28 @@
 .navbar--item2 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    float: right;
     list-style: none;
 }
 
 .item2--li {
+    border:2px solid transparent;
     color: white;
-    padding: 0 3vw 0 1vw;
     text-decoration: none;
     cursor: pointer;
+    margin: 0 2% 0 12%;
+    padding:1% 0 1% 0;
 }
-
-.mainPage--title {
-    /* border: 2px solid red; */
-
+.item2--login {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    height: 25vh;
-    padding: 3vh 0 3vh 0;
+    padding: 3%;
+    border: 2px solid #ff6949;
+    /* border-radius: 7px; */
 }
-
-.title--logo {
-    border-radius: 50%;
-    height: 20vh;
-    width: 20vh;
-    margin: 0 2vw 0 2vw;
+.item2--li:hover {
+    border-bottom: 2px solid white;
 }
-
-.title--logo>img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.title--heading {
-    font-size: 4vw;
+.item2--login:hover {
+    border: 2px solid green;
 }
 
 .dropdown--options--box {
@@ -85,14 +75,14 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 7.2vh;
-    right: 6vw;
+    top: 7.5vh;
+    right: 0.8vw;
 }
 
 .dropdown--items {
     text-decoration: none;
     color: white;
-    padding: 1vh 1vw 1vh 1vw;
+    padding: 1vh 1.5vw 1vh 1.5vw;
     font-size: 1em;
     /* color: rgb(0, 204, 255); */
 }
@@ -103,4 +93,31 @@
 
 #op--icon {
     margin-left: 2vh;
+}
+
+.mainPage--title {
+    /* border: 2px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 33%;
+    left: 6%;
+    width:50%;
+}
+
+.mainPage--heading
+{
+    color:white;
+    font-size: 4.5em;
+    font-weight: bold;
+    
+}
+.mainPage--subHeading
+{
+    color:white;
+    font-size: 1em;
+    margin-top:7%;
 }
